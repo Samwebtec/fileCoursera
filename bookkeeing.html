@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .book-list, .cart, .checkout-form {
+            margin: 20px 0;
+        }
+        .book {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            display: inline-block;
+            width: 30%;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+        .book img {
+            width: 100%;
+            height: auto;
+        }
+        .book h3 {
+            margin: 10px 0;
+        }
+        .cart {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #fff;
+        }
+        .cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cart ul li {
+            margin: 5px 0;
+        }
+        .checkout-form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        .checkout-form input, .checkout-form textarea, .checkout-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .checkout-form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div><a href="indext.html"><h1>Home</h1></a></div>
+
+    <div class="container">
+        <h1>Welcome to the Online Bookstore</h1>
+
+        <!-- Book List -->
+        <div class="book-list">
+            <div class="book" data-title="Book 1" data-price="15">
+                <img src="images/bk1.jpeg" alt="Book 1">
+                <h3>Book 1</h3>
+                <p>Author: Author 1</p>
+                <p>Price: NG15.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="book" data-title="Book 2" data-price="20">
+                <img src="images/bk2.jpeg" alt="Book 2">
+                <h3>Book 2</h3>
+                <p>Author: Author 2</p>
+                <p>Price: NG20.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="book" data-title="Book 3" data-price="25">
+                <img src="images/bk3.jpeg" alt="Book 3">
+                <h3>Book 3</h3>
+                <p>Author: Author 3</p>
+                <p>Price: NG25.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Shopping Cart -->
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </ul>
+            <p>Total: NG<span id="cart-total">0.00</span></p>
+        </div>
+
+        <!-- Checkout Form -->
+        <div class="checkout-form">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Delivery Address</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <label for="payment">Payment Method</label>
+                <select id="payment" name="payment" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash-on-delivery">Cash on Delivery</option>
+                </select>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="book.js"></script>
+
+</body>
+</html>
